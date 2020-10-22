@@ -472,11 +472,11 @@ enum {
 - (float) calculateDistanceFilter:(float)speed
 {
     float newDistanceFilter = _config.distanceFilter.integerValue;
-    if (speed < 100) {
-        // (rounded-speed-to-nearest-5) / 2)^2
-        // eg 5.2 becomes (5/2)^2
-        newDistanceFilter = pow((5.0 * floorf(fabsf(speed) / 5.0 + 0.5f)), 2) + _config.distanceFilter.integerValue;
-    }
+//     if (speed < 100) {
+//         // (rounded-speed-to-nearest-5) / 2)^2
+//         // eg 5.2 becomes (5/2)^2
+//         newDistanceFilter = pow((5.0 * floorf(fabsf(speed) / 5.0 + 0.5f)), 2) + _config.distanceFilter.integerValue;
+//     }
     return (newDistanceFilter < 1000) ? newDistanceFilter : 1000;
 }
 
